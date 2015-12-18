@@ -1,0 +1,10 @@
+FROM alpine:3.2
+
+RUN apk --update add git \
+ && rm -rf /tmp/ /var/cache/apk/*
+
+COPY git-set-mtime.linux_x64 /usr/local/bin/git-set-mtime
+
+WORKDIR /repo
+
+ENTRYPOINT ["/usr/local/bin/git-set-mtime"]

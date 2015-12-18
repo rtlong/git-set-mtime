@@ -13,3 +13,4 @@
 *.a
 mkmf.log
 /git-set-mtime
+git-set-mtime.linux_x64
